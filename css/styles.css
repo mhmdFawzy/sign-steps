@@ -1,0 +1,141 @@
+
+a {
+    color: unset;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: inherit
+}
+
+html,
+body {
+    overflow: hidden;
+    color: white
+}
+
+.signUp,
+.logIn {
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #00616a, #006a89, #0070ad, #0073ce, #006ee6);
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    width: 33.33%;
+    float: left;
+    position: relative
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1
+}
+
+#progressbar li:first-child:after {
+    content: none
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #27AE60;
+    color: white;
+    z-index: 9;
+}
+
+#regForm {
+    margin: 100px auto;
+    width: 100%;
+    min-width: 300px;
+    min-width: 300px
+}
+
+input {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    border-bottom: 2px solid #fff !important;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa
+}
+
+.tab {
+    display: none
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5
+}
+
+.step.finish,
+.step.active {
+    background-color: #4CAF50
+}
+
+.bdanger {
+    border-bottom-color: #dc3545 !important
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff !important;
+}
+
+input::placeholder {
+    color: #fff !important;
+}
